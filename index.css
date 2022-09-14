@@ -1,0 +1,112 @@
+:root {
+    --color-navy: #1c1c5e;
+    --color-red: #ff032e;
+    --color-grey: #878a9f;
+    --color-lightgrey: #878a8a;
+    --color-light: #f3f3f3;
+    --color-white: #ffffff;
+  
+    --font-extralight: 300;
+    --font-light: 300;
+    --font-regular: 400;
+    --font-medium: 500;
+    --font-semibold: 600;
+    --font-bold: 700;
+    --font-extrabold: 800;
+    --font-black: 900;
+  
+    --w-7xl: 80rem;
+  }
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html, body {
+    min-height: 100vh;
+    font-family: 'Monserrat', sans-serif;
+    font-weight: var(--font-regular);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--color-navy);
+    color: var(--color-white);
+}
+
+h1 {
+    margin-top: 3rem;
+    margin-bottom: 2rem;
+}
+
+form {
+    min-width: 75%;
+}
+
+div.input-form {
+    margin-bottom: 1.5rem;
+}
+
+div.input-form label {
+    margin-bottom: 0.5rem;
+    display: inline-block;
+}
+
+div.input-form input {
+    width: 100%;
+    padding: 0.5rem;
+    border-radius: 0.25rem;
+    border: 1px solid var(--color-grey);
+}
+
+div.buttons {
+    display: flex;
+    justify-content: space-around;
+
+}
+
+div.buttons button {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    border-radius: 0.5rem;
+    font-weight: var(--font-semibold);
+}
+
+div.buttons button:first-child {
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-navy);
+}
+
+div.buttons button:first-child:hover {
+    outline: 2px solid var(--color-white);
+    outline-offset: 0.125rem;
+    cursor: pointer;
+}
+
+div.buttons button:last-child {
+    border: 1px solid var(--color-white);
+    background-color: transparent;
+    color: var(--color-white);
+}
+
+div.buttons button:last-child:hover {
+    border: none;
+    background-color: var(--color-white);
+    color: var(--color-navy);
+    cursor: pointer;
+}
+
+
+@media only screen and (max-width: 576px) {
+    body {
+        padding-left: 0..5rem;
+        padding-right: 0..5rem;
+    }
+    form {
+        width: 100%;
+    }
+}
