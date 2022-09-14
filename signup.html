@@ -60,12 +60,50 @@
 
     <script type="text/javascript">
       function validate() {
+        const name = document.getElementById("name").value;
+        const email = document.getElementById("email").value;
+        const password = document.getElementById("set-password").value;
+        const passwordConfirmation =
+          document.getElementById("confirm-password").value;
+
+        const lettersRegex = /^[A-za-z]+$/;
+        const emailRegex =
+          /^([a-zA-Z0-9_\.\-])+\@(([a-zA-Z0-9\-])+\.)+([a-zA-Z0-9]{2,4})+$/;
+
+        const result = { isValid: true, message: "" };
+
+        if (!name || !email || !password || !passwordConfirmation)
+          result.message = "Input can not be empty!";
+        else if (!lettersRegex.test(name))
+          result.message = "Name must contain only alphabets!";
+        else if (!emailRegex.test(email))
+          result.message = "Email format invalid!";
+        else if (password != passwordConfirmation)
+          result.message = "Password not matching!";
+        else if (password.length > 12)
+          result.message = "Password can not be longer than 12 characters!";
+        else if (password.length < 6)
+          result.message = "Password can not be shorter than 6 characters!";
+
+        if (result.message) result.isValid = false;
+
+        return result;
       }
 
       function createAccount() {
+        const validation = validate();
+
+        if (!validation.isValid) {
+          alert(validation.message);
+          return;
+        }
+
+        alert("Create account success!");
+        window.location.reload();
       }
 
       function login() {
+        window.location.href = "/index.html";
       }
     </script>
   </body>
