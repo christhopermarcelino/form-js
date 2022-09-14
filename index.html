@@ -40,12 +40,33 @@
 
     <script type="text/javascript">
       function validatForm() {
+        const username = document.getElementById("username").value;
+        const password = document.getElementById("password").value;
+
+        const result = { isValid: true, message: "" };
+
+        if (!username || !password) {
+          result.isValid = false;
+          result.message = "Username and password can not be empty!";
+        }
+
+        return result;
       }
 
       function submitForm() {
+        const validation = validatForm();
+
+        if (!validation.isValid) {
+          alert(validation.message);
+          return;
+        }
+
+        alert("Login success");
+        window.location.reload();
       }
       
       function signup() {
+        window.location.href = "/signup.html";
       }
     </script>
   </body>
