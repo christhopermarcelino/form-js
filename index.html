@@ -39,7 +39,7 @@
     </form>
 
     <script type="text/javascript">
-      function validatForm() {
+      function validateForm() {
         const username = document.getElementById("username").value;
         const password = document.getElementById("password").value;
 
@@ -54,7 +54,7 @@
       }
 
       function submitForm() {
-        const validation = validatForm();
+        const validation = validateForm();
 
         if (!validation.isValid) {
           alert(validation.message);
@@ -64,7 +64,7 @@
         alert("Login success");
         window.location.reload();
       }
-      
+
       function signup() {
         window.location.href = "/signup.html";
       }
