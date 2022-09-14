@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Signup Page</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@200;300;400;500;600;700;900&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Styling -->
+    <link rel="stylesheet" href="./signup.css" />
+  </head>
+  <body>
+    <h1>Create Your Account</h1>
+    <form action="#" onsubmit="createAccount()">
+      <table>
+        <tr>
+          <td><label for="name">Name</label></td>
+          <td><input type="text" id="name" placeholder="Enter your name" /></td>
+        </tr>
+        <tr>
+          <td><label for="email">Email</label></td>
+          <td>
+            <input type="text" id="email" placeholder="Enter your Email" />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="set-password">Set Password</label></td>
+          <td>
+            <input
+              type="text"
+              id="set-password"
+              placeholder="Enter your password"
+            />
+          </td>
+        </tr>
+        <tr>
+          <td><label for="confirm-password">Confirm Password</label></td>
+          <td>
+            <input
+              type="text"
+              id="confirm-password"
+              placeholder="Retype your password"
+            />
+          </td>
+        </tr>
+      </table>
+      <div class="buttons">
+        <button type="submit">Signup</button>
+        <button type="button" onclick="login()">Login</button>
+      </div>
+    </form>
+
+    <script type="text/javascript">
+      function validate() {
+      }
+
+      function createAccount() {
+      }
+
+      function login() {
+      }
+    </script>
+  </body>
+</html>
